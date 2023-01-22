@@ -2,12 +2,64 @@
 /*======= End of Variables =======*/
 /*======= Mixins =======*/
 /*======= End of Mixins =======*/
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  transition: all 1.6s ease-out; }
+  .menu-btn .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 1 0 5px 0;
+    background: #F8F8F8;
+    border-radius: 3px;
+    transition: all 1.6s ease-out; }
+  .menu-btn .btn-line::before,
+  .menu-btn .btn-line::after {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 3px;
+    background: #F8F8F8;
+    border-radius: 3px;
+    transition: all 1.6s ease-out; }
+  .menu-btn .btn-line::before {
+    transform: translateY(-16px); }
+  .menu-btn .btn-line::after {
+    transform: translateY(16px); }
+  .menu-btn.open {
+    /*.btn-line {
+      // Line 1 - Rotate
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      // Line 2 - Hide
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      // Line 3 - Rotate
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+      }
+    }*/ }
+    .menu-btn.open .btn-line {
+      transform: translateX(-50px);
+      background: transparent; }
+    .menu-btn.open .btn-line::before {
+      transform: rotate(45deg) translate(35px, -35px); }
+    .menu-btn.open .btn-line::after {
+      transform: rotate(-45deg) translate(35px, 35px); }
+
 * {
   box-sizing: border-box; }
 
 body {
   background: #444;
-  color: set-text-color(#444);
+  color: #fff;
   height: 100%;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -15,7 +67,8 @@ body {
   body#bg-img {
     background: url(../images/background.jpg);
     background-attachment: fixed;
-    background-size: cover; }
+    background-size: cover;
+    background-repeat: no-repeat; }
     body#bg-img:after {
       content: '';
       position: absolute;
