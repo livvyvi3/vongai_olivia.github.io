@@ -29,30 +29,52 @@
     transform: translateY(-16px); }
   .menu-btn .btn-line::after {
     transform: translateY(16px); }
-  .menu-btn.open {
-    /*.btn-line {
-      // Line 1 - Rotate
-      &:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-      }
+  .menu-btn.open .btn-line {
+    transform: translateX(-50px);
+    background: transparent; }
+  .menu-btn.open .btn-line::before {
+    transform: rotate(45deg) translate(35px, -35px); }
+  .menu-btn.open .btn-line::after {
+    transform: rotate(-45deg) translate(35px, 35px); }
 
-      // Line 2 - Hide
-      &:nth-child(2) {
-        opacity: 0;
-      }
-
-      // Line 3 - Rotate
-      &:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
-      }
-    }*/ }
-    .menu-btn.open .btn-line {
-      transform: translateX(-50px);
-      background: transparent; }
-    .menu-btn.open .btn-line::before {
-      transform: rotate(45deg) translate(35px, -35px); }
-    .menu-btn.open .btn-line::after {
-      transform: rotate(-45deg) translate(35px, 35px); }
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden; }
+  .menu.show {
+    visibility: visible; }
+  .menu-branding, .menu-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden; }
+  .menu-nav {
+    margin: 0;
+    padding: 0;
+    background: #373737;
+    list-style: none;
+    transform: translate3d(0, 100%, 0);
+    transition: all 1.6s ease-out; }
+    .menu-nav.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-branding {
+    background: #444;
+    transform: translate3d(0, 100%, 0);
+    transition: all 1.6s ease-out; }
+    .menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+    .menu-branding .portrait {
+      width: 250px;
+      height: 250px;
+      background: url("../dist/images/portrait.jpg");
+      border-radius: 50%;
+      border: solid 3px #F59E0B; }
 
 * {
   box-sizing: border-box; }
