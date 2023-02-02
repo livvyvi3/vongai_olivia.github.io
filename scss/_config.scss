@@ -11,6 +11,16 @@ $background-opacity: 0.7;
 
 /*======= End of Variables =======*/
 
+/*======= Functions =======*/
+//Set text color
+@function set-text-color($color){
+    @if(lightness($color) > 40){
+        @return $dark-color;
+    }@else{
+        @return $light-color;
+    }
+}
+
 
 /*======= Mixins =======*/
 
@@ -50,7 +60,7 @@ $background-opacity: 0.7;
 }
 
 @mixin mediaMd{
-    @media screen and (max-width: 500px){
+    @media screen and (max-width: 768px){
         @content;
     }
 }

@@ -35,6 +35,7 @@
         height: 75vh;
         transform: translate3d(-100%, 0, 0);
         font-size: 24px;
+        
     }
 
     .menu-branding{
@@ -42,7 +43,10 @@
         transform: translate3d(100%, 0, 0);
 
         .portrait{
+            padding: 2rem 0;
             background: url(../images/portrait_small.jpg);
+            width: 150px;
+            height: 150px;
         }
     }
 }
