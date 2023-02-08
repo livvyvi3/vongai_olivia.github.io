@@ -122,7 +122,8 @@ body {
     background: url(../images/background.jpg);
     background-attachment: fixed;
     background-size: cover;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    background-position: center; }
     body#bg-img:after {
       content: '';
       position: absolute;
