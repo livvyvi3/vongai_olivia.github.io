@@ -135,8 +135,24 @@ main{
 
 //Button Styles
 .btn{
-    
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 0;
+    margin-bottom: 0.3rem;
+    &:hover{
+        background: $brand-color;
+        color: set-text-color($brand-color);
+    }
 }
+.btn-dark{
+    @extend .btn;
+    background: darken($color: $primary-color, $amount: 50);
+}
+.btn-light{
+    @extend .btn;
+    background: darken($color: $primary-color, $amount: 50);
+}
+
 
 /*Styling the footer*/
 #main-footer{
