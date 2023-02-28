@@ -30,7 +30,8 @@ $background-opacity: 0.7;
 
 
 @mixin background {
-    @if $show-home-image{
+    @content;
+   /* @if $show-home-image{
         &#bg-img{
             background: $home-image;
             background-attachment: fixed;
@@ -49,12 +50,12 @@ $background-opacity: 0.7;
                 background: rgba($primary-color, $background-opacity);
               }
         }
-    }
+    }*/
 }
 
 //Media Query Mixins
 @mixin mediaSm{
-    @media screen and (max-width: 500px){
+    @media screen and (max-width: 517px){
         @content;
     }
 }

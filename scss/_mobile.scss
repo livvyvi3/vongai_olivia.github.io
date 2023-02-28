@@ -1,5 +1,6 @@
 // Widescreens
 @include mediaXL {
+    
     .projects {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -14,6 +15,17 @@
 
 //Tablets and small laptops
 @include mediaMd {
+    body{
+        @include background{
+            @if $show-home-image{
+                &#bg-img{
+                    &:after {
+                        height: 110%;
+                    }
+                }
+            }
+        }
+    }
     main {
         align-items: center;
         text-align: center;
@@ -72,6 +84,18 @@
 
 //Smartphones
 @include mediaSm {
+    body{
+        @include background{
+            @if $show-home-image{
+                &#bg-img{
+                    &:after {
+                        height: 45rem;
+                    }
+                }
+            }
+        }
+    }  
+  
     main {
         padding: 2rem;
         #home h1 {
