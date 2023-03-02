@@ -203,6 +203,9 @@ main {
   grid-gap: 30px;
   grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
   grid-template-columns: repeat(3, 1fr); }
+  .about-info .about-info-title {
+    font-weight: 600;
+    color: #F59E0B; }
   .about-info .bio-img {
     grid-area: bioimage;
     margin: auto;
@@ -225,20 +228,33 @@ main {
     border-bottom: #F59E0B 5px solid; }
 
 /*======= Projects Page =======*/
-.projects {
+#projects .item {
+  margin-bottom: 9rem; }
+
+#projects .row {
   display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(3, 1fr); }
-  .projects img {
-    width: 100%;
-    border: 2px #F8F8F8 solid;
-    border-radius: 5px; }
-    .projects img:hover {
-      opacity: 0.5;
-      border-color: #F59E0B;
-      transition: all 1.6s ease-out; }
-  .projects .project-desc {
-    font-size: 24px; }
+  grid-template-columns: 1.5fr 1fr;
+  grid-gap: 2rem;
+  margin-bottom: 11rem;
+  text-align: center; }
+  #projects .row .project-title {
+    font-weight: 600;
+    font-size: 2rem; }
+  #projects .row:last-child {
+    margin-bottom: 0; }
+  #projects .row .img-cont {
+    overflow: hidden; }
+    #projects .row .img-cont img {
+      width: 90%;
+      border: 2px #F8F8F8 solid;
+      border-radius: 5px; }
+      #projects .row .img-cont img:hover {
+        opacity: 0.5;
+        border-color: #F59E0B;
+        transition: all 1.6s ease-out; }
+
+#projects .project-desc {
+  font-size: 24px; }
 
 /*======= Contact Page =======*/
 .boxes {
@@ -282,14 +298,6 @@ main {
   background: #2b2b2b;
   color: #F8F8F8;
   height: 60px; }
-
-@media screen and (min-width: 1171px) {
-  .projects {
-    grid-template-columns: repeat(4, 1fr); } }
-
-@media screen and (min-width: 769px) and (max-width: 1170px) {
-  .projects {
-    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
   body {
@@ -344,8 +352,10 @@ main {
   .about-info {
     grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
-  .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+  .projects .row {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    margin-bottom: 8rem; } }
 
 @media screen and (max-width: 517px) {
   body {
@@ -384,6 +394,8 @@ main {
       font-size: 2.5rem; }
   .text-secondary {
     font-size: 32px; }
+  .about-info.bio.text-secondary {
+    font-size: 12px; }
   main {
     padding: 2rem; }
     main #home h1 {
@@ -391,5 +403,17 @@ main {
   .lg-heading {
     margin-top: 1rem;
     font-size: 2.5rem; }
-  .projects {
-    grid-template-columns: 1fr; } }
+  #projects .item {
+    margin-bottom: 4rem; }
+  #projects .row {
+    grid-template-columns: 1fr;
+    grid-gap: 5rem;
+    margin-bottom: 2rem; }
+    #projects .row .project-desc {
+      font-size: 24px; }
+    #projects .row img-cont {
+      overflow: hidden; }
+    #projects .row img {
+      width: 100%;
+      display: block;
+      object-fit: cover; } }
