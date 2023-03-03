@@ -6,17 +6,17 @@
 
 //Tablets and small laptops
 @include mediaMd {
-    body {
-        @include background {
-            @if $show-home-image {
-                &#bg-img {
-                    &:after {
-                        height: 110%;
-                    }
-                }
-            }
-        }
-    }
+    // body {
+    //     @include background {
+    //         @if $show-home-image {
+    //             &#bg-img {
+    //                 &:after {
+    //                     height: 110%;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 
     main {
         align-items: center;
@@ -80,17 +80,6 @@
 
 //Smartphones
 @include mediaSm {
-    body {
-        @include background {
-            @if $show-home-image {
-                &#bg-img {
-                    &:after {
-                        height: 45.3rem;
-                    }
-                }
-            }
-        }
-    }
 
     * {
         font-size: 12px;
