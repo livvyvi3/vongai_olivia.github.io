@@ -6,17 +6,7 @@
 
 //Tablets and small laptops
 @include mediaMd {
-    // body {
-    //     @include background {
-    //         @if $show-home-image {
-    //             &#bg-img {
-    //                 &:after {
-    //                     height: 110%;
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
+  
 
     main {
         align-items: center;
@@ -80,6 +70,7 @@
 
 //Smartphones
 @include mediaSm {
+  
 
     * {
         font-size: 12px;
