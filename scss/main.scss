@@ -7,16 +7,16 @@
 }
 
 body {
-    @include background ;
+    @include background;
     background: $primary-color;
     color: set-text-color($primary-color);
     height: 100%;
     margin: 0;
     font-family: 'Segoe UI',
-    Tahoma,
-    Geneva,
-    Verdana,
-    sans-serif;
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
     line-height: 1.5;
 }
 
@@ -156,7 +156,7 @@ main {
             img {
                 width: 90%;
                 border: 2px $light-color solid;
-                border-radius: 5px;
+                border-radius: $commonBorderRadius;
 
                 &:hover {
                     opacity: 0.5;
@@ -232,5 +232,26 @@ main {
     color: set-text-color($primary-color);
     height: 60px;
 }
+
+/*styling the project*/
+.project-details {
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+
+        &__skill {
+            padding: 1rem 2rem;
+            margin-bottom: 1.5rem;
+            margin-right: 1.5rem;
+            font-size: 1.6rem;
+            background: rgba(#999, 0.2);
+            border-radius: $commonBorderRadius;
+            font-weight: 600;
+            color: #777;
+        }
+    }
+}
+
+
 
 @import 'mobile';
